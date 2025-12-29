@@ -6,11 +6,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "golang.go",
-        "ms-azuretools.vscode-docker",
-        "tamasfe.even-better-toml",
-        "ckotzbauer.sqlc",
-        "alexcvzz.vscode-sqlite"
+        "golang.go"
       ],
       "settings": {
         "go.useLanguageServer": true,
