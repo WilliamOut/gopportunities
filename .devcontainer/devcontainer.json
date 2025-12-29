@@ -1,0 +1,25 @@
+{
+  "name": "gopportunities-dev",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "ms-azuretools.vscode-docker",
+        "tamasfe.even-better-toml",
+        "ckotzbauer.sqlc",
+        "alexcvzz.vscode-sqlite"
+      ],
+      "settings": {
+        "go.useLanguageServer": true,
+        "go.lintTool": "golangci-lint",
+        "editor.formatOnSave": true,
+        "go.gopath": "/go",
+        "go.toolsGopath": "/go/bin"
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}
