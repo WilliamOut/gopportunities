@@ -12,5 +12,5 @@ type Opening struct {
 	Location string
 	Remote   bool
 	Link     string
-	Salary   int64
+	Salary   float64
 }
