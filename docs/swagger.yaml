@@ -1,0 +1,94 @@
+basePath: /api/v1
+definitions:
+  handler.ErrorResponse:
+    properties:
+      errorCode:
+        type: integer
+      message:
+        type: string
+    type: object
+  schemas.Opening:
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: API para gerenciamento de vagas de emprego.
+  title: Gopportunities API
+  version: "1.0"
+paths:
+  /opening:
+    delete:
+      parameters:
+      - description: Opening ID
+        in: query
+        name: id
+        required: true
+        type: string
+      responses: {}
+      summary: Delete opening
+      tags:
+      - Openings
+    get:
+      parameters:
+      - description: Opening ID
+        in: query
+        name: id
+        required: true
+        type: string
+      responses: {}
+      summary: Show opening
+      tags:
+      - Openings
+    post:
+      consumes:
+      - application/json
+      description: Create a new job opening
+      parameters:
+      - description: Request body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/schemas.Opening'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/schemas.Opening'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.ErrorResponse'
+      summary: Create opening
+      tags:
+      - Openings
+    put:
+      parameters:
+      - description: Opening ID
+        in: query
+        name: id
+        required: true
+        type: string
+      - description: Request body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/schemas.Opening'
+      responses: {}
+      summary: Update opening
+      tags:
+      - Openings
+  /openings:
+    get:
+      responses: {}
+      summary: List openings
+      tags:
+      - Openings
+swagger: "2.0"

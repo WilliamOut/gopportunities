@@ -3,6 +3,8 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "8080:8080"
     # Tornamos o arquivo opcional adicionando o '-' na frente
     env_file:
       - ../.env

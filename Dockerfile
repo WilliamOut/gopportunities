@@ -18,7 +18,7 @@ COPY . .
 # Build otimizado:
 # CGO_ENABLED=0 para linkagem estática (roda no scratch)
 # -ldflags="-s -w" reduz o tamanho do binário (remove debug symbols)
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /gopportunities ./cmd/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o /gopportunities ./main.go
 
 # --- Estágio Final ---
 FROM scratch
